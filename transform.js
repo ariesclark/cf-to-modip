@@ -1,9 +1,11 @@
 const curse = require("./curseproxy");
 
 module.exports = async function transform (id) {
-    let addon = await curse(`addon/${id}`);
-    let files = await curse(`addon/${id}/files`);
-    let description = await curse(`addon/${id}/description`, true);
+    let [addon, files, description] = await Promise.all([
+        curse(`addon/${id}`), 
+        curse(`addon/${id}/files`), 
+        curse(`addon/${id}/description`, true)
+    ]);
     
     return {
         "schemaVersion": "1.0.0",
