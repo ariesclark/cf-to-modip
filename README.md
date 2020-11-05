@@ -1,8 +1,11 @@
 # CurseForge to MODIP
 General repositiory for fetching and converting CurseForge projects into the MODIP format.
 
+### Web API.
 https://cf-modip.vercel.app/api/228756.modip.json
+
 https://cf-modip.vercel.app/api/<curseforge_id>.modip.json
+
 https://cf-modip.vercel.app/api/<curseforge_id>
 
 #### Node.js CLI
